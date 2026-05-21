@@ -1,0 +1,61 @@
+{
+  "title": "DHMI-WHO-EUR: Reproducibility package for the Digital Health Maturity Index",
+  "version": "1.0.0-pre-submission",
+  "upload_type": "software",
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "publication_date": "2026-05-13",
+  "description": "<p>Reproducibility package supporting the paper <em>Benchmarking Digital Health Governance in the WHO European Region: A Composite Maturity Index for Cross-Country Policy Comparison</em> by Curiello, Iannuzzi &amp; Nigro (2026, <em>Benchmarking: An International Journal</em>).</p><p>The package contains the complete R pipeline for constructing the Digital Health Maturity Index (DHMI), a composite benchmarking instrument that quantifies national digital health governance maturity across the 53 Member States of the WHO European Region using 74 WHO-standardised policy indicators. Components include: the raw WHO 2023 Regional Office for Europe survey data; the R scripts implementing the four-procedure robustness protocol (weight perturbation across 1,000 simulations, PCA-derived weighting, missing-data sensitivity analysis, external validity testing against DESI and the WHO UHC Service Coverage Index); the k-means cluster analysis with silhouette and Dunn-index validation; the Spearman correlation analysis with Benjamini-Hochberg FDR correction across 903 indicator pairs; the LASSO regression with 10-fold and leave-one-out cross-validation; and the Mann-Whitney U tests with FDR correction.</p><p>Two licences apply: the source code is released under the MIT License; the author-produced data products are released under CC BY 4.0. The raw WHO survey data are redistributed under the World Health Organization open data licensing terms.</p>",
+
+  "creators": [
+    {
+      "name": "Curiello, Simona",
+      "affiliation": "Department of Medical and Surgical Sciences, University of Foggia, Italy",
+      "orcid": "0000-0000-0000-0000"
+    },
+    {
+      "name": "Iannuzzi, Enrica",
+      "affiliation": "Department of Economics, University of Foggia, Italy",
+      "orcid": "0000-0000-0000-0000"
+    },
+    {
+      "name": "Nigro, Claudio",
+      "affiliation": "Department of Economics, University of Foggia, Italy",
+      "orcid": "0000-0000-0000-0000"
+    }
+  ],
+
+  "keywords": [
+    "digital health benchmarking",
+    "composite maturity index",
+    "WHO European Region",
+    "public-sector performance management",
+    "eHealth policy",
+    "OECD/JRC methodology",
+    "LASSO regression",
+    "cluster analysis",
+    "cross-country comparison",
+    "reproducibility",
+    "FAIR data"
+  ],
+
+  "related_identifiers": [
+    {
+      "identifier": "doi.org/10.0000/bij.placeholder.2026",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    }
+  ],
+
+  "communities": [],
+
+  "subjects": [
+    {"term": "Digital health governance", "identifier": "http://id.nlm.nih.gov/mesh/D000077488"},
+    {"term": "Public health policy"},
+    {"term": "Composite indicators"}
+  ],
+
+  "notes": "TODO co-authors: replace ORCID placeholders, insert the BIJ paper DOI in related_identifiers once accepted, and confirm community deposit (e.g. zenodo communities for FAIR4HEALTH or eHealth)."
+}

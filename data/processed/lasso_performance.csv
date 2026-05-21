@@ -1,0 +1,2 @@
+R2_in_sample,R2_LOO_CV,MAE_LOO_CV,overfitting_gap,lambda_min,n_obs,n_predictors,n_selected
+0.6716,0.4919,15.6171,0.1797,3.1623,52,43,9

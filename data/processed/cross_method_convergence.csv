@@ -1,0 +1,4 @@
+Indicator,WHO_label,Domain,LASSO_beta,MW_r_effect,MW_p_FDR,Convergent
+DH_3,DH action plan,Governance,4.051,0.925,0,Yes
+DH_2,HIS strategy,Governance,3.159,0.69,0.015,Yes
+DH_1,National DH strategy,Governance,3.138,0.66,0.0172,Yes

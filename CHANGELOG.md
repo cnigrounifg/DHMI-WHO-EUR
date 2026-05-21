@@ -1,0 +1,74 @@
+# Changelog — DHMI-WHO-EUR reproducibility package
+
+All notable changes to this package are documented in this file. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### To do before `v1.0.0-bij-submission`
+- Generate `renv.lock` capturing the exact R package versions used in the analysis (R ≥ 4.3.x).
+
+## [0.3.0-data-populated] — 2026-05-14
+
+### Added
+- `data/raw/WHO_2023_survey_raw.csv` — populated from the project-root `DH Data (table).csv` (53 countries × 74 indicators, 3,922 observations).
+- `data/external_validators/desi_aehr-total-egov_score-desi_2023-facts.csv` — DESI 2023 Access-to-e-Health-Records sub-index CSV (27 EU Member States, indicator `desi_aehr`, period `desi_2023`).
+- `data/external_validators/01_WHO_UHC.csv` — WHO Global Health Observatory full export of indicator `UHC_INDEX_REPORTED` (UHC Service Coverage Index, SDG 3.8.1). Filtered at run-time to ParentLocationCode == "EUR" and IsLatestYear == TRUE, yielding 53 countries with latest data year 2023.
+
+### Changed
+- `code/08_external_validity.R` adapted to the actual file formats of the populated validators:
+  - DESI is now read as CSV (originally specified as Excel). Adds an ISO2 → ISO3 crosswalk for the 27 EU MS, including the EU-statistical convention `EL` → `GRC` for Greece. Filters on `period == "desi_2023"`, `indicator == "desi_aehr"`, `breakdown == "total"`, `unit == "egov_score"`.
+  - WHO UHC is now read from the standard WHO GHO long-format CSV. Filters on `ParentLocationCode == "EUR"` and `IsLatestYear == TRUE`. Extracts `SpatialDimValueCode` (ISO3) and `FactValueNumeric` (UHC index, 0–100 scale).
+
+### Known data-year note
+The WHO UHC data populated in this version are 2023 (latest year available in the WHO GHO export). The BIJ paper §3.4 references the 2021 vintage of the same indicator with a reported Spearman ρ = +0.265 (p = 0.058, n = 52). When the pipeline is executed, the resulting Spearman ρ will reflect the 2023 numbers, not the 2021 numbers. Co-authors should decide whether to (a) update the BIJ paper §3.4 to the new figures, or (b) substitute the 2021-vintage dataset before submission.
+
+## [0.2.0-modular-pipeline] — 2026-05-13
+
+### Added
+- Modular split of the legacy monolithic `code/DHMI_analysis.R` (≈ 1,000 LOC) into 9 modular scripts plus `run_all.R` orchestrator, as specified in §5ter of `supplementary/action_planning.md`:
+  - `code/00_setup.R` — package set-up and global constants (WHO_EUR_COUNTRIES, EU27, DOMAIN_MAP, INDICATOR_LABELS, colour palettes, paths)
+  - `code/01_data_preparation.R` — load raw WHO CSV, recode -4..3, restrict to Europe, compute missingness summaries
+  - `code/02_dhmi_construction.R` — compute domain adoption rates, DHMI_equal, DHMI_scaled (0–100)
+  - `code/03_robustness_protocol.R` — weight perturbation (1,000 simulations) + missing-data sensitivity
+  - `code/04_cluster_analysis.R` — k-means at k=2,3,4 with silhouette + Dunn, k=3 final cluster labels (incl. companion-paper renaming)
+  - `code/05_spearman_fdr.R` — pairwise Spearman with Benjamini-Hochberg FDR correction
+  - `code/06_lasso_regression.R` — LASSO 10-fold + LOO-CV with annotated coefficient table
+  - `code/07_mann_whitney_fdr.R` — Mann-Whitney U with FDR + LASSO ∩ MW cross-method convergence
+  - `code/08_external_validity.R` — DESI eHealth + WHO UHC convergent validity (UHC skeleton TODO)
+  - `code/99_figures_tables.R` — regenerate all paper figures (Figures 1–4 + A1, A2) and Excel tables
+  - `code/run_all.R` — master orchestrator (single command reproduces every output)
+
+### Retained
+- `code/DHMI_analysis_legacy.R` — original monolithic pipeline, retained as reference and to support manual verification of the modular refactor.
+
+### Changed
+- File `code/DHMI_analysis.R` renamed to `code/DHMI_analysis_legacy.R`.
+
+### Known TODOs surfaced by the refactor
+- §2.5 of `02_dhmi_construction.R`: PCA-derived alternative weighting scheme (mentioned in BIJ paper §3 with Spearman ρ = 0.933) is not yet implemented; skeleton sketched in inline comments.
+- §3.4 of `03_robustness_protocol.R`: PCA-weighted ranking placeholder slot in `robustness_summary.csv`.
+- §8.3 of `08_external_validity.R`: WHO UHC Service Coverage Index 2021 validator skeleton present; co-authors should populate `data/external_validators/WHO_UHC_2021.csv` with the ISO3 + UHC_index data.
+- Populate `data/processed/` with `DHMI_scores_final.csv`, `domain_scores.csv`, `cluster_assignments.csv`.
+- Populate `data/external_validators/` with `DESI_eHealth_2023.csv` and `WHO_UHC_2021.csv`.
+- Author the consolidated `data/data_dictionary.csv` for all 74 indicators (template to be derived from the existing `DH Data (table).csv` and Table 2 of the BIJ paper).
+- Author `outputs/figures/` source files for Figures 1–4 and Figures A1–A2.
+- Author `docs/methodology_notes.md` (extended methodology rationale beyond §3 of the paper).
+- Author `docs/indicator_coding_decisions.md` (per-indicator 0–3 recoding decisions for the 74 WHO indicators).
+
+## [0.1.0-skeleton] — 2026-05-13
+
+### Added
+- Repository skeleton structure under `DHMI-WHO-EUR/` mirroring the layout specified in §5ter of the editorial Action Planning.
+- Dual-licence file (`LICENSE`): MIT for code, CC BY 4.0 for author-produced data products.
+- Machine-readable citation metadata (`CITATION.cff`).
+- Zenodo deposit metadata (`.zenodo.json`).
+- Companion-paper bridge documentation (`companion_paper_bridge/README_bridge.md`).
+- Frequently asked reviewer questions (`docs/faq.md`).
+- Audit trail of the literature review queries that motivated the editorial revision (`supplementary/consensus_queries_log.md`).
+- Audit copy of the editorial Action Planning (`supplementary/action_planning.md`).
+- Legacy monolithic R analysis pipeline retained as `code/DHMI_analysis.R` pending modular refactoring.
+
+### Known limitations
+- Placeholder Zenodo DOI (`10.5281/zenodo.XXXXXXX`) in `LICENSE`, `CITATION.cff` and `.zenodo.json`; to be replaced upon first Zenodo release.
+- ORCID placeholders (`0000-0000-0000-0000`) for all three authors.
+- BIJ paper DOI placeholder in `.zenodo.json` `related_identifiers`; to be replaced upon BIJ acceptance.

@@ -1,0 +1,80 @@
+cff-version: 1.2.0
+message: "If you use this software or data product, please cite the published article and the Zenodo deposit as indicated below."
+type: software
+title: "DHMI-WHO-EUR: Reproducibility package for the Digital Health Maturity Index"
+version: 1.0.0
+date-released: "2026-05-14"
+license: MIT
+url: "https://doi.org/10.5281/zenodo.XXXXXXX"          # ← sostituire con DOI reale dopo il deposit
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.XXXXXXX                        # ← sostituire con DOI reale dopo il deposit
+    description: "Concept DOI (resolves to latest version)"
+
+authors:
+  - family-names: Curiello
+    given-names: Simona
+    affiliation: "Department of Medical and Surgical Sciences, University of Foggia, Italy"
+    orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"      # ← inserire ORCID di Simona Curiello
+  - family-names: Iannuzzi
+    given-names: Enrica
+    affiliation: "Department of Economics, University of Foggia, Italy"
+    orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"      # ← inserire ORCID di Enrica Iannuzzi
+  - family-names: Nigro
+    given-names: Claudio
+    affiliation: "Department of Economics, University of Foggia, Italy"
+    orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"      # ← inserire ORCID di Claudio Nigro
+
+abstract: >
+  Reproducibility package supporting the paper "Benchmarking Digital Health
+  Governance in the WHO European Region: A Composite Maturity Index for
+  Cross-Country Policy Comparison" (Curiello, Iannuzzi & Nigro, 2026,
+  Benchmarking: An International Journal). The package contains the complete
+  R pipeline for constructing the Digital Health Maturity Index (DHMI) — a
+  composite benchmarking instrument that quantifies national digital health
+  governance maturity across the 53 Member States of the WHO European Region
+  using 74 WHO-standardised policy indicators across 10 domains. Components:
+  (i) raw WHO 2023 survey data; (ii) R scripts implementing the four-procedure
+  robustness protocol (weight perturbation, PCA-derived weighting, missing-data
+  sensitivity, external validity testing against DESI 2023 and WHO UHC 2023);
+  (iii) k-means cluster analysis pipeline (k=3, validated by silhouette and
+  Dunn index); (iv) Spearman correlation analysis with Benjamini-Hochberg FDR
+  correction across 903 indicator pairs; (v) LASSO regression with 10-fold and
+  leave-one-out cross-validation; (vi) Mann-Whitney U tests with FDR correction
+  and effect-size quantification; (vii) renv lockfile for long-term R version
+  pinning. The full pipeline reproduces all figures, tables and statistics of
+  the paper from raw data in under 15 seconds via a single command
+  (Rscript code/run_all.R).
+
+keywords:
+  - digital health
+  - benchmarking
+  - composite indicator
+  - WHO European Region
+  - health governance
+  - LASSO regression
+  - cluster analysis
+  - Mann-Whitney
+  - reproducibility
+  - FAIR data
+  - R
+
+preferred-citation:
+  type: article
+  title: "Benchmarking digital health governance in the WHO European Region: A composite maturity index for cross-country policy comparison"
+  authors:
+    - family-names: Curiello
+      given-names: Simona
+    - family-names: Iannuzzi
+      given-names: Enrica
+    - family-names: Nigro
+      given-names: Claudio
+  journal: "Benchmarking: An International Journal"
+  year: 2026
+  publisher:
+    name: Emerald Publishing
+  status: "under review"
+  doi: ""                                                # ← inserire DOI articolo quando accettato
+
+repository-code: "https://github.com/XXXX/DHMI-WHO-EUR" # ← inserire URL GitHub se creato
+repository-artifact: "https://doi.org/10.5281/zenodo.XXXXXXX"  # ← sostituire con DOI reale

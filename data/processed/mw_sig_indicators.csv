@@ -1,0 +1,4 @@
+Indicator,Mean_High,Mean_Low,Diff,W_stat,p_value,r_effect,p_fdr,sig_fdr,Description,Domain
+DH_3,1.09,-3,4.09,132,0,0.925,0,***,DH action plan,Governance
+DH_2,1.75,-1.17,2.92,127,7e-4,0.69,0.015,*,HIS strategy,Governance
+DH_1,1.25,-0.33,1.58,125,0.0012,0.66,0.0172,*,National DH strategy,Governance

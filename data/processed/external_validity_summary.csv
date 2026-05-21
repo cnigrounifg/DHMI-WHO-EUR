@@ -1,0 +1,3 @@
+validator,spearman_rho,p_value,n,notes
+DESI_eHealth_2023,-0.199,0.3188,27,Citizen-side utilisation; EU-27 only; reference period 2022.
+WHO_UHC_2023,0.265,0.0576,52,Health system performance capacity; full WHO European Region; latest available year per country.

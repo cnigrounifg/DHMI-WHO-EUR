@@ -1,0 +1,4 @@
+procedure,spearman_rho,p_value,n,notes
+(i) weight_perturbation_1000sim,0.928,0,53,Mean simulated rank vs equal-weight rank.
+(ii) pca_weighted_ranking,NA,NA,NA,TODO co-author: implement PCA-derived weighting (see 02_dhmi_construction.R TODO).
+(iii) missing_data_sensitivity,1,0,43,Restricted sample of countries with <20% item-level missingness.

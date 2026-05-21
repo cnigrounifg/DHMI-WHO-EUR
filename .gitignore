@@ -1,0 +1,28 @@
+# R-specific
+.Rproj.user/
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+*-Ex.R
+/*.tar.gz
+/*.Rcheck/
+.Renviron
+
+# renv: keep lockfile + activate.R, exclude the cache library (large)
+renv/library/
+renv/local/
+renv/cellar/
+renv/lock/
+renv/python/
+renv/sandbox/
+renv/staging/
+
+# OS / IDE artefacts
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Sensitive / large files that should not be in git
+# (data/raw and external_validators ARE versioned; only OS junk is excluded)
