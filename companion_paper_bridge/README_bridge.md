@@ -63,4 +63,4 @@ If you use the BIJ data products to test a CAS / systems-thinking hypothesis, pl
 
 And the reproducibility package itself:
 
-> Curiello, S., Iannuzzi, E., & Nigro, C. (2026). *DHMI-WHO-EUR: Reproducibility package for the Digital Health Maturity Index* [Data set and code]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+> Curiello, S., Iannuzzi, E., & Nigro, C. (2026). *DHMI-WHO-EUR: Reproducibility package for the Digital Health Maturity Index (BIJ submission)* (Version 1.0.2-bij-submission) [Software]. Zenodo. https://doi.org/10.5281/zenodo.20325445

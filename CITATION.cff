@@ -2,14 +2,17 @@ cff-version: 1.2.0
 message: "If you use this software or data product, please cite the published article and the Zenodo deposit as indicated below."
 type: software
 title: "DHMI-WHO-EUR: Reproducibility package for the Digital Health Maturity Index"
-version: 1.0.0
-date-released: "2026-05-14"
+version: 1.0.2-bij-submission
+date-released: "2026-05-21"
 license: MIT
-url: "https://doi.org/10.5281/zenodo.XXXXXXX"          # ← sostituire con DOI reale dopo il deposit
+url: "https://doi.org/10.5281/zenodo.20325445"
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.XXXXXXX                        # ← sostituire con DOI reale dopo il deposit
+    value: 10.5281/zenodo.20325445
     description: "Concept DOI (resolves to latest version)"
+  - type: doi
+    value: 10.5281/zenodo.20325446
+    description: "Version DOI for v1.0.2-bij-submission"
 
 authors:
   - family-names: Curiello
@@ -76,5 +79,5 @@ preferred-citation:
   status: "under review"
   doi: ""                                                # ← inserire DOI articolo quando accettato
 
-repository-code: "https://github.com/XXXX/DHMI-WHO-EUR" # ← inserire URL GitHub se creato
-repository-artifact: "https://doi.org/10.5281/zenodo.XXXXXXX"  # ← sostituire con DOI reale
+repository-code: "https://github.com/cnigrounifg/DHMI-WHO-EUR"
+repository-artifact: "https://doi.org/10.5281/zenodo.20325445"

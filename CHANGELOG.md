@@ -2,6 +2,37 @@
 
 All notable changes to this package are documented in this file. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.3-bij-submission] — 2026-05-21
+
+### Added
+- Real Zenodo DOI minted upon first deposit on https://zenodo.org:
+  - Concept DOI (always resolves to latest version): `10.5281/zenodo.20325445`
+  - Version DOI for v1.0.2-bij-submission: `10.5281/zenodo.20325446`
+
+### Changed
+- Replaced all `10.5281/zenodo.XXXXXXX` placeholders with the real concept DOI `10.5281/zenodo.20325445` in:
+  - `README.md` (Zenodo badge in the header; Zenodo deposit citation; Repository-status table).
+  - `LICENSE` (CC BY 4.0 attribution block).
+  - `CITATION.cff` (`url`, `identifiers`, `repository-artifact`; also updated `version` to `1.0.2-bij-submission`, `date-released` to `2026-05-21`, `repository-code` to `https://github.com/cnigrounifg/DHMI-WHO-EUR`, and added the v1.0.2 version DOI as an additional identifier).
+  - `companion_paper_bridge/README_bridge.md` (Zenodo deposit citation).
+- `README.md` line 64: replaced the legacy "BIJ ↔ SRBS data bridge" description with the journal-neutral "BIJ ↔ companion paper data bridge" (companion paper target journal is currently under re-evaluation).
+
+### Notes
+- The Zenodo placeholders in the historical entries of this CHANGELOG (v0.1.0-skeleton, v0.2.0-modular-pipeline) and in `supplementary/action_planning.md` are preserved as-is for archival fidelity. The disclaimer at the top of `supplementary/action_planning.md` already clarifies that the document is a historical audit trail.
+- The literal filename `51_IGCKM_SRBS.docx` referenced in `companion_paper_bridge/README_bridge.md` is preserved as it refers to a real conference-submission file that exists on the authors' local archive.
+
+## [1.0.2-bij-submission] — 2026-05-21
+
+### Changed
+- Neutralised companion-paper target-journal references throughout the supporting documentation. The companion paper is currently in preparation and its target journal is under re-evaluation (a venue suitable for European policy-making consultation is being considered). Files updated:
+  - `README.md` (Companion paper section): replaced the named journal with "Manuscript in preparation; target journal under evaluation".
+  - `companion_paper_bridge/README_bridge.md`: 12 substitutions across title, opening paragraph, comparative table (`Dimension`, `Target journal`), construct-mapping paragraph, second-order construct paragraph, cluster-grouping section header and table, empirical-triangulation paragraphs, and the closing citation entry.
+  - `docs/faq.md`: 4 substitutions in Q3 and Q5.
+  - `supplementary/action_planning.md`: added a top-of-file disclaimer clarifying that the document is a historical audit trail; the body is preserved verbatim.
+
+### Fixed
+- `CHANGELOG.md` (entry for v1.0.0-bij-submission, line 16): corrected the surname of the co-author who generated `renv.lock` on Windows from "Simona Sirotti" (typo introduced in a previous editing session) to "Simona Curiello".
+
 ## [1.0.1-bij-submission] — 2026-05-21
 
 ### Added

@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Data: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-blue.svg)](LICENSE)
 [![R version](https://img.shields.io/badge/R-%E2%89%A54.3-blue)](https://cran.r-project.org/)
-[![Zenodo DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.XXXXXXX-orange.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![Zenodo DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20325445-orange.svg)](https://doi.org/10.5281/zenodo.20325445)
 
 Reproducibility package for the paper:
 
@@ -61,7 +61,7 @@ DHMI-WHO-EUR/
 │   └── appendix/                      (Figures A1, A2)
 │
 ├── companion_paper_bridge/
-│   └── README_bridge.md               (documents the BIJ ↔ SRBS data bridge)
+│   └── README_bridge.md               (documents the BIJ ↔ companion paper data bridge)
 │
 ├── docs/
 │   ├── faq.md                         (anticipated reviewer questions)
@@ -110,7 +110,7 @@ If you use this software or data product, please cite both the paper and the Zen
 
 > Curiello, S., Iannuzzi, E., & Nigro, C. (2026). Benchmarking digital health governance in the WHO European Region: A composite maturity index for cross-country policy comparison. *Benchmarking: An International Journal* (under review).
 
-> Curiello, S., Iannuzzi, E., & Nigro, C. (2026). *DHMI-WHO-EUR: Reproducibility package for the Digital Health Maturity Index* [Data set and code]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+> Curiello, S., Iannuzzi, E., & Nigro, C. (2026). *DHMI-WHO-EUR: Reproducibility package for the Digital Health Maturity Index (BIJ submission)* (Version 1.0.2-bij-submission) [Software]. Zenodo. https://doi.org/10.5281/zenodo.20325445
 
 A machine-readable citation is provided in `CITATION.cff`.
 
@@ -153,7 +153,7 @@ Code is released under the MIT License; author-produced data products under CC B
 | Output tables (`outputs/tables/`) | ✅ |
 | Extended methodology notes (`docs/methodology_notes.md`) | ⏳ TODO |
 | Indicator coding decisions (`docs/indicator_coding_decisions.md`) | ⏳ TODO |
-| Real Zenodo DOI (replace `XXXXXXX` placeholders) | ⏳ upon first deposit |
+| Real Zenodo DOI (concept: 10.5281/zenodo.20325445; v1.0.2 version: 10.5281/zenodo.20325446) | ✅ |
 | Real author ORCIDs (replace placeholders in `CITATION.cff` and `.zenodo.json`) | ⏳ TODO |
 
 ---
