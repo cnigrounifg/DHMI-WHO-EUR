@@ -120,7 +120,7 @@ A machine-readable citation is provided in `CITATION.cff`.
 
 The DHMI dataset is also used in a companion paper that re-operationalises selected indicators as latent constructs of a complex adaptive systems model:
 
-> Curiello, S., Iannuzzi, E., & Nigro, C. (forthcoming). Digital health governance as a complex adaptive system: systemic interdependencies, institutional feedback mechanisms and health system performance in the WHO European Region. *Systems Research and Behavioural Science*.
+> Curiello, S., Iannuzzi, E., & Nigro, C. (in preparation). Digital health governance as a complex adaptive system: systemic interdependencies, institutional feedback mechanisms and health system performance in the WHO European Region. *Manuscript in preparation; target journal under evaluation*.
 
 The empirical bridge between the two papers is documented in `companion_paper_bridge/README_bridge.md`.
 

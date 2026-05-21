@@ -22,13 +22,13 @@ The paper deliberately retains the canonical λ.min tuning to preserve comparabi
 
 ## Q3. Why not analyse the data through a complex adaptive systems / structural lens directly? The cross-domain correlations suggest a richer story than a composite index can capture.
 
-The BIJ paper is deliberately bounded to the construction, validation, and descriptive-comparative application of the DHMI. The CAS-style analysis is the subject of a parallel **companion paper** (Curiello, Iannuzzi & Nigro, forthcoming, *Business Process Management Journal*), which:
+The BIJ paper is deliberately bounded to the construction, validation, and descriptive-comparative application of the DHMI. The CAS-style analysis is the subject of a parallel **companion paper** (Curiello, Iannuzzi & Nigro, in preparation; target journal under evaluation), which:
 
 - re-operationalises a subset of the 74 WHO indicators as reflective latent constructs of three co-evolving governance subsystems (codified regulatory governance, workforce absorptive capacity, data-integration architecture);
 - tests six moderated-mediation hypotheses (H1a–H3b) via PLS-SEM (Hair et al., 2019; Sarstedt et al., 2022);
 - uses the three DHMI maturity clusters as a categorical grouping variable in multi-group analysis.
 
-The two papers share the empirical dataset and the country sample but address methodologically and theoretically distinct research questions. The companion paper targets a different journal (*Business Process Management Journal*) and a different epistemological frame (structural-inferential modelling of governance subsystems under a complex adaptive systems lens). The mapping between the two papers is documented in `companion_paper_bridge/README_bridge.md` of this repository.
+The two papers share the empirical dataset and the country sample but address methodologically and theoretically distinct research questions. The companion paper targets a different journal (under evaluation) and a different epistemological frame (structural-inferential modelling of governance subsystems under a complex adaptive systems lens). The mapping between the two papers is documented in `companion_paper_bridge/README_bridge.md` of this repository.
 
 ## Q4. Eight of ten domains show zero cross-country variance. Doesn't this mean the DHMI is effectively a one-domain instrument?
 
@@ -38,11 +38,11 @@ Two consequences follow. First, in the current cycle the DHMI does function empi
 
 The paper additionally registers Item Response Theory (van der Linde et al., 2025) as a promising direction for future iterations of the DHMI once longitudinal WHO survey data permit IRT estimation. IRT can produce a continuous latent score with higher *rankability* — the proportion of inter-unit variance not attributable to chance — in the presence of ceiling effects.
 
-## Q5. The DHMI and the BPMJ companion both rely on the same WHO 2023 dataset. Why is this not duplicate publication?
+## Q5. The DHMI and the companion paper both rely on the same WHO 2023 dataset. Why is this not duplicate publication?
 
 The two papers share the empirical dataset and the country sample. They differ in **epistemological frame, methodological core, unit of inference, and target journal**, and they pursue **methodologically and theoretically distinct research questions**:
 
 - The BIJ paper addresses *how* WHO-standardised survey data can be operationalised into a replicable composite maturity index for cross-country benchmarking. Its unit of inference is the country and the empirical artefact is a one-dimensional composite score with associated cluster typology.
-- The BPMJ companion paper addresses *through which systemic mechanisms* macro-institutional quality translates into health system performance via three co-evolving governance subsystems modelled as a complex adaptive system. Its unit of inference is the structural-model path coefficient and its empirical artefact is a moderated-mediation PLS-SEM estimate.
+- The companion paper addresses *through which systemic mechanisms* macro-institutional quality translates into health system performance via three co-evolving governance subsystems modelled as a complex adaptive system. Its unit of inference is the structural-model path coefficient and its empirical artefact is a moderated-mediation PLS-SEM estimate.
 
 The relationship between the two papers is documented transparently in the Acknowledgements section of the BIJ paper, in §1 and §6 of the BIJ paper (which cite the companion explicitly), and in `companion_paper_bridge/README_bridge.md` of this repository. Neither paper duplicates the substantive findings or analytical strategies of the other; the empirical bridge between them is principled and pre-declared.

@@ -1,5 +1,7 @@
 # Action Planning – DHMI Paper (BIJ submission)
 
+> **Note (post-publication update).** This document is a historical audit trail of the editorial revision process as of 13 May 2026. References to the companion paper's target journal — initially *Systems Research and Behavioural Science* (SRBS), later realigned to *Business Process Management Journal* (BPMJ) — reflect the state of planning at the time of writing. The target journal for the companion paper is currently under re-evaluation and is no longer fixed to either SRBS or BPMJ. See `CHANGELOG.md` and `README.md` for the authoritative current status. The body of this document is preserved verbatim for archival fidelity.
+
 **Documento di lavoro**, basato su valutazione critica della bozza `00_DHMI_Paper_BIJ_Final.docx` e dell'appendice `Appendix_BIJ.docx` rispetto alla letteratura peer-reviewed indicizzata su Consensus (query lanciate il 13 maggio 2026).
 
 Scopo: declinare in modo operativo le indicazioni significative emerse da Consensus e **non considerate** nella bozza, distinguendo tra (i) lacune potenzialmente **bloccanti in revisione** e (ii) raffinamenti che rafforzano la solidità della pubblicazione.
