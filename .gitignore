@@ -24,5 +24,26 @@ Thumbs.db
 *.swp
 *~
 
+# Synology Drive sync artefacts
+.SynologyWorkingDirectory
+.DS_Store
+@eaDir/
+*.docexpsrls
+*.docexsrls
+*.docXpSrLs
+.dropbox
+.dropbox.attr
+*.synology
+*~SyncID*
+
+# Microsoft Office lock files (created when a .docx/.xlsx/.pptx is open)
+~$*
+.~lock.*#
+~*.tmp
+
+# Backup files
+*.bak
+*.orig
+
 # Sensitive / large files that should not be in git
 # (data/raw and external_validators ARE versioned; only OS junk is excluded)
